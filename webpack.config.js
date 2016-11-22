@@ -19,6 +19,15 @@ module.exports = {
 
   ],
   module: {
+    preloaders: [
+     {
+        test: /\.js$/,
+        loaders: ['eslint'],
+        include: [
+          path.resolve(__dirname, "src"),
+        ]
+      }
+    ],
     loaders: [
       {
         loaders: ['babel-loader'], //добавили loader 'react-hot'
